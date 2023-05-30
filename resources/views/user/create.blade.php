@@ -19,7 +19,7 @@
             @csrf
             <div class="mb-3">
                 <label for="name" class="form-label">Nome:</label>
-                <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" id="name">
+                <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" id="name" value="{{old('name')}}">
                 @error('name')
                     <div class="invalid-feedback">
                         {{$message}}
@@ -28,7 +28,7 @@
             </div>
             <div class="mb-3">
                 <label for="email" class="form-label">Email:</label>
-                <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" id="email">
+                <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" id="email" value="{{old('email')}}">
                 @error('email')
                     <div class="invalid-feedback">
                         {{$message}}
@@ -46,9 +46,14 @@
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="term" id="term">
-                <label class="form-check-label" for="flexRadioDefault1">
+                <label class="form-check-label mb-2 @error('term') is-invalid @enderror" for="flexRadioDefault1">
                     Default radio
                 </label>
+                @error('term')
+                    <div class="invalid-feedback">
+                        {{$message}}
+                    </div>
+                @enderror
             </div>
             <button type="submit" class="btn btn-primary">ADICIONAR</button>
         </form>

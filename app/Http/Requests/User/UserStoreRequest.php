@@ -24,7 +24,8 @@ class UserStoreRequest extends FormRequest
         return [
             'name' => 'string|required',
             'email' => 'email|required',
-            'password' => 'string|required'
+            'password' => 'string|required',
+            'term' => 'accepted'
         ];
     }
 
@@ -33,7 +34,8 @@ class UserStoreRequest extends FormRequest
         return [
             'string' => 'Esse campo precisa ser uma string',
             'required' => 'Esse campo é origatório',
-            'email' => 'Esse campo deve ser um email'
+            'email' => 'Esse campo deve ser um email',
+            'accepted' => 'Aceite o termo'
         ];
     }
 }

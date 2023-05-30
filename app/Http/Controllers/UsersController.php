@@ -31,7 +31,7 @@ class UsersController extends Controller
      */
     public function store(UserStoreRequest $request)
     {
-        $attributes = $request->only(['name', 'email', 'password']);
+        $attributes = $request->validated();
         // $attributes['password'] = bcrypt(value:'password');
         User::create($attributes);
         return redirect()->route('user.index');

@@ -18,12 +18,14 @@
         <a href="{{route('user.create')}}" type="button" class="btn btn-primary">
             NOVO USUÁRIO
         </a>
+
+
         <table class="table">
             <thead>
                 <tr>
                     <th scope="col">ID</th>
                     <th scope="col">Nome</th>
-                    <th scope="col">Email</th>  
+                    <th scope="col">Email</th>
                     <th>Botão</th>
                     <th>Editar</th>
                     <th>Deletar</th>
