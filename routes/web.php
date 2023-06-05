@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */ 
 
+// Rotas do Sistema de Usuários
 Route::get('/users', [UsersController::class, 'index'])->name('user.index');
 Route::get('/users/add', [UsersController::class, 'create'])->name('user.create');
 Route::post('/users/add', [UsersController::class, 'store'])->name('user.store');
